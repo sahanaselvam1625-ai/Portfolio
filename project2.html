@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Shopping Website</title>
+  <style>
+    body {
+      background-color: #050a1a;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      font-style: italic;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #1ce9fc;
+      margin-top: 30px;
+      font-style: italic;
+      font-weight: 600;
+      text-shadow: none; /* Removed glow */
+    }
+
+    /* Overview Section */
+    .description {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 25px 30px;
+      background: rgba(20, 181, 205, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      line-height: 1.8;
+    }
+
+    .description h2 {
+      color: #1ce9fc;
+      text-shadow: none;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    .description p {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+    }
+
+    /* Features Section */
+    .features {
+      max-width: 900px;
+      margin: 50px auto;
+      background: rgba(69, 163, 189, 0.05) ;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      text-align: left;
+      
+    }
+
+    .features h1 {
+      text-align: center;
+      color: #1ce9fc;
+      margin-bottom: 25px;
+      text-shadow: none;
+      font-size: 30px;
+
+    }
+
+    .feature-item {
+      margin: 15px 0;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .feature-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(5px);
+    }
+
+    .feature-item strong {
+      color: #1ce9fc;
+      font-size: 23px;
+    }
+
+    .feature-item p {
+      color: #f0f0f0;
+      margin-top: 8px;
+      line-height: 1.6;
+      font-size: 19px;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      max-width: 850px;
+      margin: 60px auto;
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+    }
+
+    /* Back button */
+    a.back-btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #00ffff, rgb(217, 49, 158));
+      color: #000;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    a.back-btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, rgb(217, 49, 158), #00ffff);
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Shopping Website</h1>
+
+  <div class="description">
+    <h2>Overview</h2>
+    <p>The Stylez is a responsive and visually appealing fashion shopping website that provides users with an elegant interface to explore and purchase stylish dresses. The website aims to give users a smooth online shopping experience by highlighting trending collections, featured products, and easy navigation options.
+    </p>
+  </div>
+
+  <!-- Features Section -->
+  <div class="features">
+    <h1>Features</h1>
+
+    <div class="feature-item">
+      <strong>Homepage</strong>
+      <p>Eye-catching banner with a “Shop Now” button and responsive navigation.</p>
+    </div>
+
+    <div class="feature-item">
+      <strong>Featured Products</strong>
+      <p>Stylish product cards showcasing top items with images and prices.</p>
+    </div>
+
+    <div class="feature-item">
+      <strong>Trending Collections</strong>
+      <p>Grid layout displaying the latest fashion trends with elegant visuals.</p>
+    </div>
+
+    <div class="feature-item">
+      <strong>About Section</strong>
+      <p>Engaging brand story with profile image and smooth animations.</p>
+    </div>
+
+    <div class="feature-item">
+      <strong>Footer Section</strong>
+      <p>Minimal footer with copyright and brand credits.</p>
+    </div>
+  </div>
+
+  <h1>Project Screenshots</h1>
+  <div class="slideshow-container">
+    <img class="slide" src="Screenshot 2024-09-17 112728.png" alt="Traffic Dashboard Screenshot 1" />
+    <img class="slide" src="Screenshot 2024-09-17 113853.png" alt="Traffic Dashboard Screenshot 2" />
+    <img class="slide" src="Screenshot 2024-09-17 113940.png" alt="Traffic Dashboard Screenshot 3" />
+    <img class="slide" src="Screenshot 2024-09-17 120002.png" alt="Traffic Dashboard Screenshot 4" />
+  </div>
+
+  <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlides() {
+      slides.forEach(slide => (slide.style.display = "none"));
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+
+    showSlides();
+  </script>
+</body>
+</html>
