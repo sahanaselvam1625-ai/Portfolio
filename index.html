@@ -46,13 +46,73 @@
     }
 
     /* ---------- HERO ---------- */
+
+    /* ---------- HERO ANIMATIONS ---------- */
+.hero-title {
+  animation: slideDown 1.2s ease forwards;
+}
+
+.hero-subtitle {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-desc {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Highlight name glow */
+.highlight {
+  color: #ff00ff;
+  text-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+/* Button glow animation */
+.glow-btn {
+  animation: glowPulse 2s infinite alternate;
+}
+
+/* Keyframes */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 30px #ff00ff;
+  }
+}
+
     .hero {
       height: 100vh;
       display: flex; flex-direction: column; justify-content: center; align-items: center;
       text-align: center;
       padding: 0 20px;
-      background: linear-gradient(137deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                  url('premium_photo-1661878265739-da90bc1af051.jpg');
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),url("images.jpg");
       background-size: 110%;
       background-position: center;
       background-attachment: fixed;
@@ -67,7 +127,7 @@
       width: 100%; height: 100%;
       background: radial-gradient(circle at top left, #00ffff33, transparent 70%),
                   radial-gradient(circle at bottom right, #ff00ff33, transparent 70%);
-      animation: pulse 6s ease-in-out infinite alternate;
+      animation: pulse 8s ease-in-out infinite alternate;
       z-index: 0;
       font-style: italic;
     }
@@ -99,6 +159,7 @@
       box-shadow: 0 6px 20px rgba(255,0,255,0.4);
       font-style: italic;
     }
+    
 
     /* ---------- ABOUT ---------- */
     .about {
@@ -535,15 +596,27 @@
     </div>
   </header>
 
+  
   <!-- HERO -->
-  <section class="hero" id="home">
-    <h1>Hi, I'm <spanstyle="color:#ff00ff;">Sahana Selvam</span></h1>
-    <h2>Front End Developer | Data Analyst | UI/UX Developer</h2>
+<section class="hero" id="home">
+  <h1 class="hero-title">
+    Hi, I'm <span class="highlight">Sahana Selvam</span>
+  </h1>
+
+  <h2 class="hero-subtitle">
+    <span class="typing"></span>
+  </h2>
+
+  <p class="hero-desc">
+    I design and build modern web experiences and turn data into meaningful insights.
+  </p>
+
+  <a href="Sahana new resume.pdf" class="btn glow-btn" download>
+    Download CV
+  </a>
+</section>
+
     
-    
-    <!-- ✅ Updated Download CV Button -->
-   <a href="Sahana_Selvam_Resume.pdf.pdf" class="btn" download>Download CV</a>
-  </section>
 
   <!-- ABOUT -->
   <section class="about" id="about" data-reveal>
@@ -557,6 +630,7 @@
         <span class="skill">JavaScript</span>
         <span class="skill">React</span>
         <span class="skill">SQL</span>
+        <span class="skill">Microsoft Excel</span>
       </div>
     </div>
   </section>
@@ -585,10 +659,10 @@
 
     <div class="skill-box">
       <div class="skill-header">
-        <h3>JavaScript</h3><span>75%</span>
+        <h3>JavaScript</h3><span>60%</span>
       </div>
       <p class="skill-desc">Proficient in DOM manipulation, interactivity, and building dynamic features.</p>
-      <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+      <div class="skill-bar"><div class="skill-fill" data-width="60%"></div></div>
     </div>
 
     <div class="skill-box">
@@ -657,21 +731,21 @@
     <h2>My Projects</h2>
     <div class="project-grid">
 
-      <div class="project-card">
+  <div class="project-card">
   <img src="portfolio-icon-in-linear-style-vector.jpg" alt="Portfolio Website">
   <h3>Portfolio Website</h3>
   <p>Tech Used: HTML, CSS, JavaScript</p>
   <a href="project1.html" class="btn">View</a>
 </div>
 
-      <div class="project-card">
+<div class="project-card">
   <img src="a3147b494cb28f4a874ebebea0370844.webp" alt="Online Shopping Website">
   <h3>Online Shopping Website</h3>
   <p>Tech Used: HTML, CSS, JavaScript</p>
   <a href="project2.html" class="btn">View</a>
 </div>
 
-     <div class="project-card">
+<div class="project-card">
   <img src="ChatGPT Image Oct 27, 2025, 08_18_28 PM.png" alt="Website Traffic Dashboard">
   <h3>Website Traffic Dashboard</h3>
   <p>Tech Used: Python, Pandas, Excel, PowerBI</p>
@@ -679,14 +753,14 @@
 </div>
 
 
-      <div class="project-card">
+<div class="project-card">
   <img src="netflix.jpg" alt="Netfilx in Data analytics">
   <h3>Netfilx in Data analytics</h3>
   <p>Tech Used: Python, Pandas, Excel,  PowerBI</p>
   <a href="project4.html" class="btn">View</a>
 </div>
 
-       <div class="project-card">
+<div class="project-card">
   <img src="2-3.png" alt="Gas Detection System">
   <h3>Gas Detection System</h3>
   <p>Tech Used: Arduino IDE, C/C++(Embedded), IoT Concept (Internet of Things)</p>
@@ -700,7 +774,7 @@
   <a href="project6.html" class="btn">View</a>
 </div>
 
- <div class="project-card">
+<div class="project-card">
   <img src="AdobeStock_908034195-min-scaled.jpeg" alt="Healthcare Monitoring">
   <h3>Healthcare Monitoring</h3>
   <p>Tech Used: Python, Pandas, Excel, PowerBI</p>
@@ -725,6 +799,7 @@
     
   </div>
 </div>
+
 
 
   <!-- CONTACT -->
@@ -764,6 +839,7 @@
   </script>
 </body>
 <script>
+
   // Animate skill bars when scrolled into view
   const skillSection1 = document.querySelector('.skills-section');
   const skillFills1 = document.querySelectorAll('.skill-fill');
@@ -812,4 +888,35 @@ window.addEventListener('scroll', () => {
 });
 
 </script>
+<script>
+const textArray = ["Front-End Developer", "Data Analyst"];
+
+let index = 0;
+let charIndex = 0;
+const typingSpan = document.querySelector(".typing");
+
+function typeText() {
+  if (charIndex < textArray[index].length) {
+    typingSpan.textContent += textArray[index].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeText, 100);
+  } else {
+    setTimeout(eraseText, 1500);
+  }
+}
+
+function eraseText() {
+  if (charIndex > 0) {
+    typingSpan.textContent = textArray[index].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseText, 50);
+  } else {
+    index = (index + 1) % textArray.length;
+    setTimeout(typeText, 500);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", typeText);
+</script>
+
 </html>
