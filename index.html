@@ -1164,6 +1164,52 @@ color:#00ffff;
 
     /* ================= MOBILE RESPONSIVE ================= */
 @media screen and (max-width: 768px) {
+
+.hero{
+    min-height:100vh;
+    background-size:cover;
+    background-position:75% center;
+}
+
+.hero-container{
+    margin-left:0;
+    padding:20px;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-left{
+    width:100%;
+    text-align:center;
+}
+
+.hero-title{
+    font-size:2.2rem;
+}
+
+.hero-subtitle{
+    font-size:1.3rem;
+}
+
+.hero-desc{
+    font-size:1rem;
+    max-width:100%;
+    text-align:center;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    width:100%;
+    align-items:center;
+}
+
+.hero-buttons .btn{
+    width:220px;
+}
+
+.hero-social{
+    justify-content:center;
+}
   .experience-card{
 
 padding:20px;
@@ -1196,6 +1242,89 @@ padding:20px;
 align-items:center;
 text-align:center;
 }
+.certifications{
+
+padding:70px 15px;
+
+}
+
+.cert-grid{
+
+grid-template-columns:1fr;
+
+gap:25px;
+
+}
+
+.cert-card{
+
+max-width:100%;
+
+height:220px;
+
+}
+
+.cert-card img{
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+.certifications h2{
+
+font-size:2rem;
+
+}
+.experience{
+padding:70px 15px;
+}
+
+.company-card h1{
+font-size:1.8rem;
+}
+
+.company-card h3{
+font-size:1.3rem;
+}
+
+.date{
+font-size:16px;
+}
+
+.achievement-grid{
+grid-template-columns:1fr;
+gap:20px;
+}
+
+.achievement{
+padding:25px;
+}
+
+.icon{
+font-size:40px;
+}
+
+.achievement h3{
+font-size:1.2rem;
+}
+
+.achievement p{
+font-size:15px;
+line-height:1.7;
+}
+
+.tech-stack{
+justify-content:center;
+gap:10px;
+}
+
+.tech-stack span{
+padding:8px 15px;
+font-size:13px;
+}
+
 
   header {
     padding: 15px 20px;
@@ -1205,10 +1334,31 @@ text-align:center;
     font-size: 1.4rem;
   }
 
-  nav ul {
-    right: 20px;
-    width: 200px;
-  }
+nav ul{
+
+position:absolute;
+
+top:70px;
+
+right:15px;
+
+width:220px;
+
+padding:20px;
+
+background:#151515;
+
+border-radius:15px;
+
+box-shadow:0 0 20px rgba(0,255,255,.2);
+
+}
+
+nav ul li{
+
+text-align:center;
+
+}
 
   .hero {
     height: 100vh;
